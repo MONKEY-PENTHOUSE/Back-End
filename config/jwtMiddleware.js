@@ -1,5 +1,7 @@
 const jwt = require('jsonwebtoken');
+// jsonwebtoken기반 로그인 방식 구현
 const secret_config = require('./secret');
+// 미들웨어 만들어줘서 사용
 const jwtMiddleware = (req, res, next) => {
     // read the token from header or url
     const token = req.headers['x-access-token'] || req.query.token;
@@ -33,7 +35,7 @@ const jwtMiddleware = (req, res, next) => {
 
     // process the promise
     p.then((verifiedToken)=>{
-        //비밀 번호 바꼇을 때 검증 부분 추가 할 곳
+        //비밀 번호 변경됐을 때 검증 부분 추가 할 곳
         req.verifiedToken = verifiedToken;
         next();
     }).catch(onError)

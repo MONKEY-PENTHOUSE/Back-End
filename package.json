@@ -7,11 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "NODE_ENV=development node index.js",
     "prod": "NODE_ENV=production node index.js",
-    "start": "nodemon index.ts"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@gitlab.com:softsquared/template/api-server-node.git"
+    "start": "nodemon index.js"
   },
   "author": "",
   "license": "ISC",
