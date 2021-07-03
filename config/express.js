@@ -20,8 +20,8 @@ module.exports = function () {
     // CORS 허용해줄 도메인 cors 미들웨어 사용해준다.
 
     /* App (Android, iOS) */
-    require('../src/app/routes/indexRoute')(app);
-    //require('../src/app/routes/userRoute')(app);
+    //require('../src/app/routes/indexRoute')(app);
+    require('../src/app/routes/userRoute')(app);
     /* Web */
     //require('../src/web/routes/indexRoute')(app);
     return app;

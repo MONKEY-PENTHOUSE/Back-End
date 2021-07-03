@@ -1,5 +1,5 @@
 {
-  "name": "api-server-node",
+  "name": "monkey_penthouse",
   "version": "1.0.0",
   "description": "Node.js API Server",
   "main": "index.js",
@@ -20,13 +20,18 @@
     "jsonwebtoken": "^8.5.1",
     "method-override": "^3.0.0",
     "mysql2": "^2.0.0",
+    "node-cache": "^5.1.2",
     "regex-email": "^1.0.2",
-    "typescript": "^4.3.4",
+    "request": "^2.88.2",
+    "to": "^0.2.9",
+    "twilio": "^3.65.0",
+    "typescript": "^4.3.5",
+    "update": "^0.7.4",
     "winston": "^3.2.1",
     "winston-daily-rotate-file": "^4.2.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.7",
+    "nodemon": "^2.0.9",
     "ts-node": "^9.1.1"
   }
 }

@@ -22,7 +22,6 @@ const jwtMiddleware = (req, res, next) => {
             })
         }
     );
-
     // 토큰 유효성검사 실패시, 검증실패 res를 뿌린다.
     const onError = (error) => {
         res.status(403).json({

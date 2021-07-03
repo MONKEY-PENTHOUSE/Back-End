@@ -3,11 +3,12 @@ const {logger} = require('./winston');
 const databaseInfo = require('./databasepwd');
 
 const pool = mysql.createPool({
-    host: 'localhost',
-    user: 'root',
+    host: 'rp.c4wybh857q9a.ap-northeast-2.rds.amazonaws.com',
+    user: 'steady',
     port: 3306,
     password: databaseInfo.dbpwd,
-    database: 'toy'
+    database: 'MP',
+    dateStrings: 'date'
 });
 
 module.exports = {
