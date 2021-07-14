@@ -143,7 +143,7 @@ exports.sendPhoneCode = async function(req, res){
         });
     }
 
-    var phone = /^[0-9]{2,3}[0-9]{3,4}[0-9]{4}$/;
+    const phone = /^[0-9]{2,3}[0-9]{3,4}[0-9]{4}$/;
     if(!phone.test(phoneNumber)){
         return res.json({
             isSuccess: false,
