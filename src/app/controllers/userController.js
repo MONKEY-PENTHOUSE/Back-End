@@ -323,33 +323,35 @@ exports.signIn = async function (req, res) {
 
         connection.release();
     } catch (err) {
-        logger.error(`App - SignIn Query error\n: ${JSON.stringify(err)}`);
+        logger.error(`App - 자체 로그인 에러\n: ${JSON.stringify(err)}`);
         connection.release();
         return false;
     }
 };
 
-/**
- update : 2019.09.23
- 03.check API = token 검증
- **/
-exports.check = async function (req, res) {
-    res.json({
-        isSuccess: true,
-        code: 200,
-        message: "검증 성공",
-        info: req.verifiedToken
-    })
-};
+// /**
+//  update : 2019.09.23
+//  03.check API = token 검증
+//  **/
+// exports.check = async function (req, res) {
+//     res.json({
+//         isSuccess: true,
+//         code: 200,
+//         message: "검증 성공",
+//         info: req.verifiedToken
+//     })
+// };
+
+
 //카카오 유저 
 exports.kakaoOauth = async function (req, res){
     const {
         kakaoAccessToken, kakaoRefreshToken
     } = req.body;
 
-    var nickname;
-    var profileImage;
-    var loginID;
+    let nickname;
+    let profileImage;
+    let loginID;
 
     const insertKakaoUserInfo = async function (loginID, nickname, kakaoRefreshToken, profileImage){
         try{
